@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctk44l2mu85se"]
+
+[ext_resource type="Script" path="res://MainMenu/mainmenu.cs" id="1_4tnuc"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4tnuc")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 83.0
+offset_right = 699.0
+offset_bottom = 205.0
+text = "This Is My Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 259.0
+offset_right = 646.0
+offset_bottom = 342.0
+tooltip_text = "Clicking this will start the game!"
+text = "Play Game"
+
+[node name="Quit Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 428.0
+offset_right = 646.0
+offset_bottom = 511.0
+tooltip_text = "Clicking this will quit the game!"
+text = "Quit Game"
+
+[connection signal="pressed" from="Play Button" to="." method="OnPlayButtonPressed"]
+[connection signal="pressed" from="Quit Button" to="." method="OnQuitButtonPressed"]
